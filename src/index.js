@@ -15,10 +15,8 @@ const store = createStore(reducer, applyMiddleware(thunk))
 
 
 ReactDOM.hydrate(
-  <Provider store={store}>
     <BrowserRouter>
       <Switch>
         <App />
       </Switch>
-    </BrowserRouter>
-  </Provider>, document.getElementById('root'));
+    </BrowserRouter>, document.getElementById('root'));
