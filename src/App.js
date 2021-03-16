@@ -69,9 +69,9 @@ class App extends React.Component {
         {/* <PrivateRoute path={`/editEntry/:entryId`} render={({match}) => <EntryEditor match={match} />} /> */}
         {/* <Route path="/:id" render={props => <ListDisplay {...props}/>} /> */}
         {/* <Suspense fallback={renderLoader()}> */}
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
           <Route path="/:id" render={({match}) => <ListDisplayHooks match={match}/>} />
-        </BrowserRouter>
+        {/* </BrowserRouter> */}
         {/* </Suspense> */}
         {/* <PrivateRoute exact path="/editentry" component={EditEntry} /> */}
         {/* </Switch> */}
