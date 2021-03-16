@@ -44,9 +44,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Toaster position="top-center" />
-        <Switch>
+        {/* <Switch> */}
         {/* <Route exact path="/" component={LandingPage} /> */}
-        <Route exact path="/robots.txt" onEnter={() =>{window.location.reload()}} />
+        {/* <Route exact path="/robots.txt" onEnter={() =>{window.location.reload()}} /> */}
         {/* <Route exact path="/register" render={props => <Register {...props} history={this.props.history}/>} /> */}
         {/* <Route exact path="/registerHooks" component={RegisterHooks} /> */}
         {/* <Route exact path='/maksaa' component={Maksaa} /> */}
@@ -70,7 +70,7 @@ class App extends React.Component {
         {/* <Route path="/:id" render={props => <ListDisplay {...props}/>} /> */}
         <Suspense fallback={renderLoader()}><Route path="/:id" render={({match}) => <ListDisplayHooks match={match}/>} /></Suspense>
         {/* <PrivateRoute exact path="/editentry" component={EditEntry} /> */}
-        </Switch>
+        {/* </Switch> */}
       </div>
     )
   }
