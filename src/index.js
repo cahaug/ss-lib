@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 // import { createStore, applyMiddleware } from 'redux'
 // import thunk from 'redux-thunk'
 // import logger from 'redux-logger'
@@ -15,4 +15,4 @@ import { BrowserRouter } from 'react-router-dom';
 // const store = createStore(reducer, applyMiddleware(thunk))
 
 
-ReactDOM.hydrate(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+ReactDOM.hydrate(<App />, document.getElementById('root'));
