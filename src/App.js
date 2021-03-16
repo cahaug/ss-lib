@@ -24,9 +24,9 @@ import { Toaster } from 'react-hot-toast';
 
 // import ListDisplayHooks from './components/ListDisplayHooks'
 //code split listdiplayhooks into own chunk
-const ListDisplayHooks = lazy(() => import('./components/ListDisplayHooks'))
+import ListDisplayHooks from './components/ListDisplayHooks'
 
-const renderLoader = () => <p>Loading...</p>
+// const renderLoader = () => <p>Loading...</p>
 
 // import PaymentSuccess from './components/PaymentSuccess'
 // import PaymentPage from './components/PaymentPage'
@@ -68,7 +68,9 @@ class App extends React.Component {
         {/* <PrivateRoute path={`/editEntry/:entryId`} component={props => <EntryEditor {...props} />} /> */}
         {/* <PrivateRoute path={`/editEntry/:entryId`} render={({match}) => <EntryEditor match={match} />} /> */}
         {/* <Route path="/:id" render={props => <ListDisplay {...props}/>} /> */}
-        <Suspense fallback={renderLoader()}><Route path="/:id" render={({match}) => <ListDisplayHooks match={match}/>} /></Suspense>
+        {/* <Suspense fallback={renderLoader()}> */}
+        <Route path="/:id" render={({match}) => <ListDisplayHooks match={match}/>} />
+        {/* </Suspense> */}
         {/* <PrivateRoute exact path="/editentry" component={EditEntry} /> */}
         {/* </Switch> */}
       </div>
