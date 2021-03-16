@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 // import './App.css';
-import { Route, Router } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 // import PrivateRoute from './components/PrivateRoute'
 // import LandingPage from './components/LandingPage'
 // import Register from './components/Register'
@@ -69,9 +69,9 @@ class App extends React.Component {
         {/* <PrivateRoute path={`/editEntry/:entryId`} render={({match}) => <EntryEditor match={match} />} /> */}
         {/* <Route path="/:id" render={props => <ListDisplay {...props}/>} /> */}
         {/* <Suspense fallback={renderLoader()}> */}
-        <Router>
+        <BrowserRouter>
           <Route path="/:id" render={({match}) => <ListDisplayHooks match={match}/>} />
-        </Router>
+        </BrowserRouter>
         {/* </Suspense> */}
         {/* <PrivateRoute exact path="/editentry" component={EditEntry} /> */}
         {/* </Switch> */}
