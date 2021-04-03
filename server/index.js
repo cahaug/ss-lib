@@ -4,6 +4,7 @@
 // import React from 'react';
 // import express from 'express';
 // import ReactDOMServer from 'react-dom/server';
+const express = require('express');
 
 // import App from '../src/App';
 var path = require('path');
