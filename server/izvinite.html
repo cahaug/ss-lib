@@ -6,7 +6,7 @@
     <script>
         const currentURL = `${window.location.href}`
         const pname = window.location.pathname
-        sessionStorage.setItem('injectedReefer',currentURL)
+        localStorage.setItem('injectedReefer',currentURL)
         window.location.href = `https://link-in.bio${pname}`
     </script>
 </body>
