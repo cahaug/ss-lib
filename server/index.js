@@ -1,12 +1,12 @@
-import path from 'path';
-import fs from 'fs';
+// import path from 'path';
+// import fs from 'fs';
 
-import React from 'react';
-import express from 'express';
-import ReactDOMServer from 'react-dom/server';
+// import React from 'react';
+// import express from 'express';
+// import ReactDOMServer from 'react-dom/server';
 
-import App from '../src/App';
-
+// import App from '../src/App';
+var path = require('path');
 const PORT = process.env.PORT || 4242;
 const app = express();
 
