@@ -6,7 +6,10 @@
     <script>
         const currentURL = `${window.location.href}`
         const pname = window.location.pathname
+        console.log('window', window.location.hostname)
         localStorage.setItem('injectedReefer',window.location.hostname)
+        document.title = window.location.hostname
+        history.pushState(null, null, window.location.hostname)
         window.location.href = `https://link-in.bio${pname}`
     </script>
 </body>
