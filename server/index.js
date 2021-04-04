@@ -29,6 +29,10 @@ const app = express();
 
 // app.use(express.static('./build'));
 // const izviniteHTML = require('../server/izvinite.html')
+app.get('/', async (req, res) => {
+  res.sendFile(path.join(__dirname + '/izvinite2.html'));
+})
+
 app.get('/:id', async (req, res) => {
   res.sendFile(path.join(__dirname + '/izvinite.html'));
 })
