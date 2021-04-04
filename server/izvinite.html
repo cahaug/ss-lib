@@ -21,7 +21,9 @@
         localStorage.setItem('injectedReefer',window.location.hostname)
         document.title = dict[`${window.location.hostname}`]
         history.pushState(null, null, dict[`${window.location.hostname}`])
-        window.location.href = `https://link-in.bio${pname}`
+        // window.location.href = `https://link-in.bio${pname}`
+        const code = `<meta http-equiv="refresh" content="2;url=https://link-in.bio${pname}" />`
+        document.head.insertAdjacentHTML( 'refresh', code );
     </script>
 </body>
 </html>
