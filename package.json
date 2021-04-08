@@ -15,6 +15,7 @@
     "@stripe/stripe-js": "^1.13.0",
     "axios": "^0.21.1",
     "core-util-is": "^1.0.2",
+    "hpp": "^0.2.3",
     "qrcode.react": "^1.0.1",
     "query-string": "^6.14.0",
     "react": "^16.14.0",
