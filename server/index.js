@@ -6,6 +6,7 @@
 // import ReactDOMServer from 'react-dom/server';
 const express = require('express');
 
+var bouncer = require ("express-bouncer")(500, 900000, 30);
 // import App from '../src/App';
 var path = require('path');
 const PORT = process.env.PORT || 4242;
@@ -29,13 +30,19 @@ const app = express();
 
 // app.use(express.static('./build'));
 // const izviniteHTML = require('../server/izvinite.html')
-app.get('/', async (req, res) => {
+app.get('/', bouncer.block, async (req, res) => {
   res.sendFile(path.join(__dirname + '/izvinite2.html'));
 })
 
-app.get('/:id', async (req, res) => {
+app.post('/py0reÄääni', bouncer.block, async (req, res) => {
+  // wipe store
+  bouncer.addresses = { };
+})
+
+app.get('/:id', bouncer.block, async (req, res) => {
   res.sendFile(path.join(__dirname + '/izvinite.html'));
 })
+
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
