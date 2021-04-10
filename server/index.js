@@ -37,7 +37,7 @@ app.get('/', bouncer.block, async (req, res) => {
 app.post('/py0re%C3%84%C3%A4%C3%A4ni', bouncer.block, async (req, res) => {
   // wipe store
   bouncer.addresses = { };
-  res.status(200).close()
+  res.status(200).json({message:'success'})
 })
 
 app.get('/:id', bouncer.block, async (req, res) => {
