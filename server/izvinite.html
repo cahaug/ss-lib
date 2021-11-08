@@ -25,7 +25,8 @@
         document.title = dict[`${window.location.hostname}`]
         history.pushState(null, null, dict[`${window.location.hostname}`])
         if(window.location.hostname == 'link-m.ee'){
-            fetch(`https://https://link-in-bio.limited/short${pname}`)
+            const mt = navigator.maxTouchPoints
+            fetch(`https://https://link-in-bio.limited/short${pname}?mt=${mt}`)
             .then(response => response.json())
             .then(data => {
                 console.log('data', data)
