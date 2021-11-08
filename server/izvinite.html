@@ -15,7 +15,8 @@
             'xn--90ani.me':'либ.me',
             'xn--90ani.cc':'либ.cc',
             'xn--90ani.com':'либ.com',
-            'lib.ltd':'lib.ltd'
+            'lib.ltd':'lib.ltd',
+            'link-m.ee':'link-m.ee'
         }
         const currentURL = `${window.location.href}`
         const pname = window.location.pathname
@@ -23,7 +24,17 @@
         localStorage.setItem('injectedReefer',window.location.hostname)
         document.title = dict[`${window.location.hostname}`]
         history.pushState(null, null, dict[`${window.location.hostname}`])
-        window.location.href = `https://link-in.bio${pname}`
+        if(window.location.hostname == 'link-m.ee'){
+            fetch(`https://https://link-in-bio.limited/short${pname}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('data', data)
+                window.location.href = data.identiDate[0].referencingURL
+            })
+            .catch(err => console.log('error',err))
+        } else{
+            window.location.href = `https://link-in.bio${pname}`
+        }
         // const code = `<meta http-equiv="refresh" content="2;url=https://link-in.bio${pname}" />`
         // document.head.insertAdjacentHTML( 'refresh', code );
     </script>
