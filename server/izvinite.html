@@ -26,8 +26,8 @@
         history.pushState(null, null, dict[`${window.location.hostname}`])
         if(window.location.hostname == 'link-m.ee' || window.location.hostname == 'lib.ltd'){
             const mt = navigator.maxTouchPoints
-            fetch(`https://https://link-in-bio.limited/s/short${pname}?mt=${mt}`)
-            .then(response => {console.log('response',response);response.json()})
+            fetch(`https://link-in-bio.limited/s/short${pname}?mt=${mt}`)
+            .then(response => response.json())
             .then(data => {
                 console.log('data', data)
                 // window.location.href = data.identiDate[0].referencingURL
