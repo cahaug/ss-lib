@@ -24,7 +24,7 @@
         localStorage.setItem('injectedReefer',window.location.hostname)
         document.title = dict[`${window.location.hostname}`]
         history.pushState(null, null, dict[`${window.location.hostname}`])
-        if(window.location.hostname == 'link-m.ee' || window.location.hostname == 'lib.ltd'){
+        if(window.location.hostname == 'link-m.ee' || window.location.hostname == 'lib.ltd' || window.location.hostname == 'xn--5caa.co' || window.location.hostname == 'åå.co' || window.location.hostname == 'xn--f1aa.cc' || window.location.hostname == 'жж.cc' || window.location.hostname == 'xn--4caa.cc' || window.location.hostname == 'ää.cc'){
             const mt = navigator.maxTouchPoints
             fetch(`https://link-in-bio.limited/s/short${pname}?mt=${mt}`)
             .then(response => response.json())
