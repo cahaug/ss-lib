@@ -41,7 +41,7 @@ app.post('/py0re%C3%84%C3%A4%C3%A4ni', bouncer.block, async (req, res) => {
 })
 
 app.get('/:id', bouncer.block, async (req, res) => {
-  console.log('req.hostame', req.hostname)
+  console.log('req.originalURL', req.originalUrl)
   res.sendFile(path.join(__dirname + '/izvinite.html'));
 })
 
