@@ -24,18 +24,18 @@
         localStorage.setItem('injectedReefer',window.location.hostname)
         document.title = dict[`${window.location.hostname}`]
         history.pushState(null, null, dict[`${window.location.hostname}`])
-        if(window.location.hostname == 'link-m.ee'){
-            const mt = navigator.maxTouchPoints
-            fetch(`https://https://link-in-bio.limited/short${pname}?mt=${mt}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log('data', data)
-                window.location.href = data.identiDate[0].referencingURL
-            })
-            .catch(err => console.log('error',err))
-        } else{
+        // if(window.location.hostname == 'link-m.ee'){
+        //     const mt = navigator.maxTouchPoints
+        //     fetch(`https://https://link-in-bio.limited/short${pname}?mt=${mt}`)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log('data', data)
+        //         window.location.href = data.identiDate[0].referencingURL
+        //     })
+        //     .catch(err => console.log('error',err))
+        // } else{
             window.location.href = `https://link-in.bio${pname}`
-        }
+        // }
         // const code = `<meta http-equiv="refresh" content="2;url=https://link-in.bio${pname}" />`
         // document.head.insertAdjacentHTML( 'refresh', code );
     </script>
